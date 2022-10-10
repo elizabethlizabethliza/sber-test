@@ -34,6 +34,7 @@ const Const = {
 };
 
 try {
+  // Variables described in task
   const [X, Y, M] = process.argv.slice(2, 5).map((s) => Number(s));
   Const.UsersNumber = X && !Number.isNaN(X) ? X : Const.UsersNumber;
   Const.GroupsNumber = Y && !Number.isNaN(Y) ? Y : Const.GroupsNumber;
@@ -118,6 +119,7 @@ console.log("Message number", Const.MessagesNumber);
     }
   }
   loadingInterval.stop();
+  // For now every user has at least one group
 
   loadingInterval.start(
     `Generation conversation that every user has at least ${MINIMAL_DIALOGS_PER_USER} conversation, including group conversations`
